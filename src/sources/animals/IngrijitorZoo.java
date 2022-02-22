@@ -1,11 +1,9 @@
 package sources.animals;
 
-import static java.lang.System.out;
-
-public abstract class Animal {
+public class IngrijitorZoo {
     private String nume;
 
-    public Animal(String nume) {
+    public IngrijitorZoo(String nume) {
         this.nume = nume;
     }
 
@@ -16,5 +14,8 @@ public abstract class Animal {
     public void setNume(String nume) {
         this.nume = nume;
     }
-    public abstract void mananca(String mancare);
+
+    public void hranesteAnimal(Animal animal, String mancare){
+        animal.mananca(mancare);
+    }
 }
